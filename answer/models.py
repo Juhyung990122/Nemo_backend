@@ -1,3 +1,7 @@
 from django.db import models
+from question.models import questions
 
-# Create your models here.
+class answers(models.Model):
+    a_content = models.TextField()
+    date = models.DateTimeField(auto_now_add=True)
+    question  = models.ForeignKey(questions, on_delete=models.CASCADE)
