@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .model import questions
+from .models import questions
 
 class questionSerializer(serializers.ModelSerializer):
     class Meta:
