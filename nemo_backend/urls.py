@@ -8,7 +8,10 @@ class FacebookLogin(SocialLoginView):
     adapter_class = FacebookOAuth2Adapter
 
 urlpatterns = [
-    path('nemo-admin/', admin.site.urls),
+    path('nemo-admin/', admin.site.urls),]
+    path('user/',include('user.urls')),
+    path('question/',include('question.urls')),
+    path('answer/',include('answer.urls')),
     path('api-auth/', include('rest_framework.urls')),
     path('rest-auth/', include('rest_auth.urls')),
     path('rest-auth/registration/', include('rest_auth.registration.urls')),
