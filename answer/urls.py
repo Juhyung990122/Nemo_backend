@@ -8,5 +8,5 @@ answer_router = routers.DefaultRouter()
 answer_router.register('',views.answerViewSet)
 
 urlpatterns = [
-    path('answers/',include(answer_router))
+    path('answer/',include(answer_router.urls)),
 ]

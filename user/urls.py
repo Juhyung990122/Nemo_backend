@@ -8,5 +8,5 @@ user_router = routers.DefaultRouter()
 user_router.register('',views.userViewset)
 
 urlpatterns = [
-    path('users/',include(user_router.urls))
+    path('user/',include(user_router.urls)),
 ]

@@ -7,8 +7,11 @@ from rest_auth.registration.views import SocialLoginView
 class FacebookLogin(SocialLoginView):
     adapter_class = FacebookOAuth2Adapter
 
-urlpatterns = [
+urlpatterns  = [ 
     path('nemo-admin/', admin.site.urls),
+    path('',include('question.urls')),
+    path('',include('answer.urls')),
+    path('',include('user.urls')),
     path('api-auth/', include('rest_framework.urls')),
     path('rest-auth/', include('rest_auth.urls')),
     path('rest-auth/registration/', include('rest_auth.registration.urls')),

@@ -8,5 +8,5 @@ question_router = routers.DefaultRouter()
 question_router.register('',views.questionViewSet)
 
 urlpatterns = [
-    path('questions/',include(question_router.urls))
+    path('question/',include(question_router.urls)),
 ]
