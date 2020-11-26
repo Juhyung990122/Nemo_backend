@@ -7,3 +7,4 @@ from .models import questions
 class questionViewSet(viewsets.ModelViewSet):
     queryset = questions.objects.all()
     serializer_class = questionSerializer
+    http_method_names = ['get','post']
